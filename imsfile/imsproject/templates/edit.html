@@ -1,0 +1,26 @@
+{%extends 'partials/base.html'%}
+{% block title %} edit page{% endblock title%}
+{% block content %} 
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            <div class='border '>
+                   <h3> edit item</h3>
+                   <hr>
+                   
+                 </div>
+                      <form method="post">
+                        {% csrf_token %}
+                           {{editproduct}}
+                           <a class='btn btn-danger' href="{% url 'dashboard-product'%}"> cancel</a>
+                       <input class='btn btn-info' type='submit' value='confirm'>
+                      </form>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content%}

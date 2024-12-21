@@ -17,6 +17,8 @@ class Product(models.Model):
     class Meta:
         verbose_name_plural = 'Product'
     
+
+    
 class Order (models.Model):
    product=models.ForeignKey(Product,on_delete=models.CASCADE) 
    staff=models.ForeignKey(User,on_delete=models.CASCADE,null=True)
